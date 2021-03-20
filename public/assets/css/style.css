@@ -1,7 +1,12 @@
+body{
+  background-color: rgb(133, 191, 240);
+  text-align: center;
+  font-size: 25px;
+}
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: #e2dbd2;
 }
 
 .label {

@@ -1,6 +1,6 @@
 <h1>burgers!</h1>
 
-<h2>burgers that are not sleepy!</h2>
+
 
 <ul>
   {{#each burgers}}
@@ -10,7 +10,7 @@
   {{/each}}
 </ul>
 
-<h2>burgers that are sleepy!</h2>
+<h2>burgers that are eaten</h2>
 
 <ul>
   {{#each burgers}}
@@ -28,11 +28,6 @@
     <input type="text" id="ca" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
 
   <button type="submit">Add burger</button>
 </form>
