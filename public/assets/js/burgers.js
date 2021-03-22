@@ -1,35 +1,31 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-  $(".delete-button").on("click", function(event) {
+  $(".delete-button").on("click", function (event) {
     console.log("Delete worked");
     console.log(this);
-    var button = $(this);
+    let button = $(this);
     // grabs id from button
-    var id = button.attr("data-id");
-    $.ajax("/api/burgers/" + id, {
+    let id = button.attr("data-id");
+    $.ajax("/api/burger/" + id, {
       type: "DELETE"
     }).then(
-      function(results) {
+      function (results) {
         console.log(results);
         location.reload();
       }
     );
   });
-  $(".change-sleep").on("click", function(event) {
+  $(".change-devaoured").on("click", function(event) {
     var id = $(this).data("id");
-    var newSleep = $(this).data("newsleep");
-
-    var newSleepState = {
-      sleepy: newSleep
-    };
-
+    var newDevoured = $(this).data("newDevoured");
+    var newDevouredState = newDevoured;
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newSleepState
+      data: newDevouredState
     }).then(
       function() {
-        console.log("changed sleep to", newSleep);
+        console.log("changed devoured to", newDevoured);
         // Reload the page to get the updated list
         location.reload();
       }
@@ -41,8 +37,8 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#ca").val().trim(),
-      sleepy: $("[name=sleepy]:checked").val().trim()
+      burger_name: $("#ca").val().trim(),
+      devoured:0
     };
 
     // Send the POST request.

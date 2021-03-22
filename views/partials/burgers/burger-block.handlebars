@@ -3,7 +3,7 @@
 	{{burger_name}}
 	<button class="change-devoured  {{#if devoured}}btn btn-danger{{else}}btn btn-success{{/if}}" data-id="{{id}}"
 		data-newdevoured="{{devoured}}">
-		{{#if devoured}}Eat-the-Burger!{{else}}Un-devour!{{/if}}
+		{{#if devoured}}Eat the burger!{{else}}burger eaten{{/if}}
 	</button>
-	<button class="delete-button" data-id="{{id}}">Delete burger.</button>
+	<button class="delete-button" data-id="{{id}}">Delete this burger.</button>
 </li>
