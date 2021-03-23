@@ -15,19 +15,19 @@ $(function() {
       }
     );
   });
-  $(".change-devaoure").on("click", function(event) {
+  $(".change-devoured").on("click", function(event) {
     var id = $(this).data("id");
-    var newDevoure = $(this).data("newdevoure");
-    var newDevoureState = {
-      devoure:newDevoure
+    var newDevoured = $(this).data("newdevoured");
+    var newDevouredState = {
+      devoured:newDevoured
     };
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newDevoureState
+      data: newDevouredState
     }).then(
       function() {
-        console.log("changed devoure to", newDevoure);
+        console.log("changed devoure to", newDevoured);
         // Reload the page to get the updated list
         location.reload();
       }
