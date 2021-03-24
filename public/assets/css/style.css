@@ -3,10 +3,38 @@ body{
   text-align: center;
   font-size: 25px;
 }
+.title{
+  font-size: 70px;
+  color: brown;
+  text-align: center;
+  background-color: cornflowerblue;
+  padding: 10px;
+}
+.burgerImg{
+  width: 600px;
+  height: 315px;
+  border-radius: 10px;
+}
+h2{
+  color: brown;
+  font-size: 40px;
+}
+.availableBurgers{
+  float: left;
+  text-align: center;
+}
+.eaten{
+float: right;
+}
+.addBurger{
+text-align: center;
+
+}
 li {
   padding: 5px;
   margin: 5px;
-  background: #e2dbd2;
+list-style: none;
+
 }
 
 .label {
@@ -21,4 +49,18 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+}
+.change-devoured{
+  border-radius: 5px;
+  padding:5px;
+}
+.delete-button{
+border-radius: 5px;
+padding:5px;
+}
+.submit{
+  border-radius: 5px;
+padding:5px;
+margin-top: 5px;
+
 }

@@ -1,42 +1,46 @@
-<h1>burgers!</h1>
+<h1 class="title">burgers!</h1>
 
-
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
+<img class="burgerImg" src="https://elements.evonik.com/wp-content/uploads/2019/11/burger-fb.jpg" />
+<div>
+  <div class="availableBurgers">
+    <h2>Available burgers</h2>
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
       {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>burgers that are eaten</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="eaten">
+    <h2>Burgers devoured</h2>
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
       {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="bu">Burger Name:</label>
-    <input type="text" id="bu" name="name">
+      {{/if}}
+      {{/each}}
+    </ul>
   </div>
+</div>
+<div class="addBurger">
+  <h2>Add a burger</h2>
+  <form class="create-form">
 
-  <div class="form-group">
-    <label for="devo">dvoure?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> not Eaten.
-  </div>
+    <div class="form-group">
+      <label for="bu">Enter Burger Name:</label>
+      <input type="text" id="bu" name="name">
+    </div>
 
-  <button type="submit">Add burger</button>
-</form>
+    <div class="form-group">
+      {{!-- <label for="devo">dvoure?</label><br> --}}
+      <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+      <input type="radio" name="devoured" value="0"> not Eaten.
+    </div>
 
+    <button type="submit" class="submit">Add burger</button>
+  </form>
+</div>
 {{!-- <form class="create-form">
 
   <div class="form-group">
@@ -46,4 +50,5 @@
 
 
   <button type="submit">Add burger</button> --}}
-{{!-- </form> --}}
+  {{!--
+</form> --}}
